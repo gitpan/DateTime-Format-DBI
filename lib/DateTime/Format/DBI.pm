@@ -7,7 +7,7 @@ use vars qw ($VERSION);
 use Carp;
 use DateTime 0.10;
 
-our $VERSION = '0.01';
+$VERSION = '0.02';
 
 $VERSION = eval $VERSION;
 

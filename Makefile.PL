@@ -1,4 +1,4 @@
-use 5.008;
+use 5.003;
 use ExtUtils::MakeMaker;
 # $Id: Makefile.PL,v 1.3 2003/05/30 14:04:48 cfaerber Exp $
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
