@@ -1,5 +1,5 @@
 package DateTime::Format::DBI;
-# $Id: DBI.pm,v 1.2 2003/07/20 14:17:27 cfaerber Exp $
+# $Id: DBI.pm,v 1.3 2003/11/02 23:17:38 cfaerber Exp $
 
 use strict;
 use vars qw ($VERSION);
@@ -7,7 +7,7 @@ use vars qw ($VERSION);
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.03';
+$VERSION = '0.031';
 $VERSION = $VERSION + 0.0;
 
 our %db_to_parser = (

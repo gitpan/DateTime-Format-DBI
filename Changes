@@ -1,5 +1,10 @@
 Revision history for Perl extension DateTime::Format::DBI.
 
+0.031 Mon Nov 03 00:00:00 2003
+	- include missing dependency on DBI (>= 1.2) in 
+	  Makefile.PL (reported by Joshua Hoblitt).
+	- database type names are now case-insensitively.
+
 0.03  Sun Jul 20 00:00:00 2003
 	- documentation now clearly states that this is only
 	  a factory and describes the basic interface of the
@@ -15,4 +20,4 @@ Revision history for Perl extension DateTime::Format::DBI.
 	- supports DBD::mysql and DateTime::Format::MySQL
 	- supports DBD::Pg and DateTime::Format::Pg
 
-$Id: Changes,v 1.2 2003/07/20 14:17:27 cfaerber Exp $
+$Id: Changes,v 1.3 2003/11/02 23:17:38 cfaerber Exp $
