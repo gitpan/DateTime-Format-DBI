@@ -1,6 +1,11 @@
 Revision history for Perl extension DateTime::Format::DBI.
 
-0.01  Mon Jun 16 00:00:00 2003
+0.03  Sun Jul 20 00:00:00 2003
+	- documentation now clearly states that this is only
+	  a factory and describes the basic interface of the
+	  returned objects.
+
+0.02  Mon Jun 16 00:00:00 2003
 	- compatible with perl 5.003
 
 0.01  Sat Jun 07 00:00:00 2003
@@ -8,4 +13,4 @@ Revision history for Perl extension DateTime::Format::DBI.
 	- supports DBD::mysql and DateTime::Format::MySQL
 	- supports DBD::Pg and DateTime::Format::Pg
 
-$Id: Changes,v 1.4 2003/05/30 14:07:11 cfaerber Exp $
+$Id: Changes,v 1.2 2003/07/20 14:17:27 cfaerber Exp $
