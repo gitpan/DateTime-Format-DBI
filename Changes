@@ -4,6 +4,8 @@ Revision history for Perl extension DateTime::Format::DBI.
 	- documentation now clearly states that this is only
 	  a factory and describes the basic interface of the
 	  returned objects.
+	- requires DBI 1.21 (or higher) and uses it to determine
+	  the database type through proxy/ODBC connections.
 
 0.02  Mon Jun 16 00:00:00 2003
 	- compatible with perl 5.003
