@@ -1,0 +1,29 @@
+DateTime::Format::DBI version 0.01
+
+This module finds a DateTime::Format::* class that is suitable for the use with
+a given DBI connection (and DBD::* driver).
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  (one of:)	DateTime::Format::MySQL
+  		DateTime::Format::Pg
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2003 Claus Färber
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself. 
+
+$Id: README,v 1.2 2003/05/30 14:04:48 cfaerber Exp $
