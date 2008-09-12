@@ -5,3 +5,4 @@ LICENSE
 Makefile.PL
 lib/DateTime/Format/DBI.pm
 t/1basic.t
+META.yml                                 Module meta-data (added by MakeMaker)

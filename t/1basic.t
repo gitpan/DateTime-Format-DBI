@@ -1,4 +1,4 @@
-# $Id: 1basic.t,v 1.1 2003/06/16 15:06:05 cfaerber Exp $
+# $Id: 1basic.t 4060 2008-09-12 18:59:06Z cfaerber $
 use Test::More tests => 1;
 BEGIN { 
   use_ok('DateTime::Format::DBI')

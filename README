@@ -21,9 +21,9 @@ This module requires these other modules and libraries:
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2003 Claus Färber
+Copyright (C) 2003-2008 Claus A. Färber
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
 
-$Id: README,v 1.1 2003/06/16 15:06:05 cfaerber Exp $
+$Id: README 4060 2008-09-12 18:59:06Z cfaerber $
