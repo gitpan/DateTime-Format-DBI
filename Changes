@@ -1,5 +1,9 @@
 Revision history for Perl extension DateTime::Format::DBI.
 
+0.033_20080913 00:00:00 2008
+	- added experimental support for Oracle and SQLite.
+	- added Test::Pod and Test::Pod::Coverage
+
 0.032 Sat Sep 13 00:00:00 2008
 	- added support for DateTime::Format::DB2
 	  (patch by Chris Weyl)
@@ -24,4 +28,4 @@ Revision history for Perl extension DateTime::Format::DBI.
 	- supports DBD::mysql and DateTime::Format::MySQL
 	- supports DBD::Pg and DateTime::Format::Pg
 
-$Id: Changes 4060 2008-09-12 18:59:06Z cfaerber $
+$Id: Changes 4063 2008-09-13 16:49:41Z cfaerber $

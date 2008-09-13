@@ -1,6 +1,6 @@
 use 5.003;
 use ExtUtils::MakeMaker;
-# $Id: Makefile.PL 4060 2008-09-12 18:59:06Z cfaerber $
+# $Id: Makefile.PL 4063 2008-09-13 16:49:41Z cfaerber $
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
 WriteMakefile(
@@ -12,5 +12,7 @@ WriteMakefile(
 	},
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM => 'lib/DateTime/Format/DBI.pm', # retrieve abstract from module
-       AUTHOR     => 'Claus Färber <perl@faerber.muc.de>') : ()),
+       AUTHOR     => 'Claus Faerber <CFAERBER@cpan.org>',
+       LICENSE	  => 'perl'
+    ) : ()),
 );

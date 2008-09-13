@@ -1,4 +1,4 @@
-DateTime::Format::DBI version 0.01
+ateTime::Format::DBI version 0.032
 
 This module finds a DateTime::Format::* class that is suitable for the use with
 a given DBI connection (and DBD::* driver).
@@ -17,13 +17,15 @@ DEPENDENCIES
 This module requires these other modules and libraries:
 
   (one of:)	DateTime::Format::MySQL
+		DateTime::Format::Oracle
   		DateTime::Format::Pg
+		DateTime::Format::SQLite
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2003-2008 Claus A. Färber
+Copyright (C) 2003-2008 Claus FÃ¤rber
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
 
-$Id: README 4060 2008-09-12 18:59:06Z cfaerber $
+$Id: README 4063 2008-09-13 16:49:41Z cfaerber $

@@ -1,21 +1,23 @@
 package DateTime::Format::DBI;
-# $Id: DBI.pm 4060 2008-09-12 18:59:06Z cfaerber $
+# $Id: DBI.pm 4063 2008-09-13 16:49:41Z cfaerber $
 
 use strict;
 use vars qw ($VERSION);
+use warnings;
 
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.032';
-$VERSION = $VERSION + 0.0;
+$VERSION = '0.032_20080913';
+$VERSION = eval { $VERSION };
 
 our %db_to_parser = (
   # lowercase for case-insensitivity!
   'mysql'	=> 'DateTime::Format::MySQL',
   'pg'		=> 'DateTime::Format::Pg',
   'db2'		=> 'DateTime::Format::DB2',
-# 'oracle'	=> 'DateTime::Format::Oracle', # not tested
+  'oracle'	=> 'DateTime::Format::Oracle', # experimental
+  'sqlite'	=> 'DateTime::Format::SQLite', # experimental
 );
 
 sub new {
@@ -63,8 +65,9 @@ a given DBI connection (and C<DBD::*> driver).
 It currently supports the following drivers: 
 L<IBM DB2 (DB2)|DateTime::Format::DB2>,
 L<MySQL|DateTime::Format::MySQL>, 
-# L<Oracle|DateTime::Format::Oracle>,
-L<PostgreSQL (Pg)|DateTime::Format::Pg>.
+L<Oracle|DateTime::Format::Oracle>,
+L<PostgreSQL (Pg)|DateTime::Format::Pg>,
+L<SQLite|DateTime::Format::SQLite>.
 
 B<WARNING:> This module provides a quick method to find the
 correct parser/formatter class. However, this is usually not
@@ -146,13 +149,9 @@ class for more information.
 Support for this module is provided via the datetime@perl.org email
 list.  See http://lists.perl.org/ for more details.
 
-=head1 AUTHOR
+=head1 AUTHOR / LICENSE
 
-Claus A. Färber <perl@cfaerber.name>
-
-=head1 COPYRIGHT
-
-Copyright © 2003-2008 Claus A. Färber.  All rights reserved.  
+Copyright © 2003-2008 Claus Färber.  All rights reserved.  
 
 This program is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
