@@ -1,15 +1,22 @@
 --- #YAML:1.0
-name:                DateTime-Format-DBI
-version:             0.032_20080913
-abstract:            Find a parser class for a database connection.
-license:             perl
-author:              
+name:               DateTime-Format-DBI
+version:            0.033
+abstract:           Find a parser class for a database connection.
+author:
     - Claus Faerber <CFAERBER@cpan.org>
-generated_by:        ExtUtils::MakeMaker version 6.42
-distribution_type:   module
-requires:     
-    DateTime:                      0.1
-    DBI:                           1.21
+license:            perl
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    DateTime:  0.1
+    DBI:       1.21
+    perl:      5.003
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.48
 meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
-    version: 1.3
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4

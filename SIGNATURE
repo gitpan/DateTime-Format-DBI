@@ -1,0 +1,34 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 20b9c5cd86b461cbb6d4278f8fe228a269ec36a3 Changes
+SHA1 f235ba4160673bcb7c9d58c2f09dbc7fc0efadea LICENSE
+SHA1 06aca25d67bdb378476c16f185ce501a00f88166 MANIFEST
+SHA1 b5cbce8f1079fd414128eb6acb834c15f04abca2 META.yml
+SHA1 d44f07e3c30153b6bf2985e00e112f65788cbdc4 Makefile.PL
+SHA1 976c21b8147f38da47060fdf08c73d6ff1ce5aca README
+SHA1 631b8a99591a2750d96805ee1b3d3b7007620722 lib/DateTime/Format/DBI.pm
+SHA1 6db99b062aced1648ee6446437f4f8ff863f776b t/00basic.t
+SHA1 331eb58bd820411c7685dfd7aff4d060fdafab5e t/10pod.t
+SHA1 94cbaa3da22888098b42d4affce837e3b45ccfef t/11pod_cover.t
+SHA1 16c19824b373d192db666cac33ecbcf1d5102bbf t/withsqlite.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.10 (Darwin)
+
+iEYEARECAAYFAkshOfoACgkQSKUOY2OWgPB5iACdFu5eQv42oebhS1w81A4gsCiP
+aOIAn28MxX2QTG9NxQ/kDp5+8TH62Bla
+=NKL6
+-----END PGP SIGNATURE-----

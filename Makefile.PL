@@ -1,6 +1,6 @@
 use 5.003;
 use ExtUtils::MakeMaker;
-# $Id: Makefile.PL 4063 2008-09-13 16:49:41Z cfaerber $
+# $Id: Makefile.PL 4365 2009-12-10 18:11:51Z cfaerber $
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
 WriteMakefile(
@@ -15,4 +15,25 @@ WriteMakefile(
        AUTHOR     => 'Claus Faerber <CFAERBER@cpan.org>',
        LICENSE	  => 'perl'
     ) : ()),
+
+    $ExtUtils::MakeMaker::VERSION < 6.18 ? () : (
+	'SIGN'		=> 1,
+    ),
+
+    $ExtUtils::MakeMaker::VERSION < 6.45 ? () : (
+	'META_MERGE'	=> { 
+	    'requires'	    => { 'perl'	=> 5.003, },
+#	    'recommends'    => { 'perl'	=> 5.008003, },
+        },
+    ),
 );
+
+sub MY::postamble {
+return <<EOF
+release: release-cpan
+
+release-cpan:
+	cpan-upload \$(DISTVNAME).tar\$(SUFFIX)
+
+EOF
+}
