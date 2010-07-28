@@ -1,5 +1,9 @@
 Revision history for Perl extension DateTime::Format::DBI.
 
+0.034 Mon Jul 26 00:00:00 2010
+	- added experimental support for MSSQL and Sybase.
+	- use Module::Build
+
 0.033 Thu Dec 10 00:00:00 2009
 	- release of 0.032_20080913
 	- minor documentation fixes

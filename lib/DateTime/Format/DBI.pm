@@ -8,7 +8,7 @@ use warnings;
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.033';
+$VERSION = '0.034';
 $VERSION = eval { $VERSION };
 
 our %db_to_parser = (
@@ -16,8 +16,10 @@ our %db_to_parser = (
   'mysql'	=> 'DateTime::Format::MySQL',
   'pg'		=> 'DateTime::Format::Pg',
   'db2'		=> 'DateTime::Format::DB2',
+  'mssql'	=> 'DateTime::Format::MSSQL',  # experimental
   'oracle'	=> 'DateTime::Format::Oracle', # experimental
   'sqlite'	=> 'DateTime::Format::SQLite', # experimental
+  'sybase'	=> 'DateTime::Format::Sybase', # experimental
 );
 
 sub new {
@@ -37,8 +39,6 @@ sub new {
 
   return $parser;
 }
-
-=encoding utf8
 
 =head1 NAME
 
@@ -64,10 +64,12 @@ a given DBI connection (and C<DBD::*> driver).
 
 It currently supports the following format modules:
 L<IBM DB2 (DB2)|DateTime::Format::DB2>,
+L<Microsoft SQL (MSSQL)|DateTime::Format::MSSQL>, 
 L<MySQL|DateTime::Format::MySQL>, 
 L<Oracle|DateTime::Format::Oracle>,
 L<PostgreSQL (Pg)|DateTime::Format::Pg>,
-L<SQLite|DateTime::Format::SQLite>.
+L<SQLite|DateTime::Format::SQLite>, and
+L<Sybase|DateTime::Format::Sybase>.
 
 B<NOTE:> This module provides a quick method to find the correct parser and
 formatter class. However, this is usually not sufficient for full database
@@ -142,11 +144,11 @@ list.  See http://lists.perl.org/ for more details.
 
 =head1 AUTHOR
 
-Claus Färber <CFAERBER@cpan.org>
+Claus FE<auml>rber <CFAERBER@cpan.org>
 
 =head1 LICENSE
 
-Copyright © 2003-2009 Claus Färber.  All rights reserved.  
+Copyright 2003-2010 Claus FE<auml>rber.  All rights reserved.  
 
 This program is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

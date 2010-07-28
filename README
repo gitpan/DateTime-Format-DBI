@@ -1,4 +1,4 @@
-ateTime::Format::DBI version 0.032
+DateTime::Format::DBI
 
 This module finds a DateTime::Format::* class that is suitable for the use with
 a given DBI connection (and DBD::* driver).
@@ -23,7 +23,7 @@ This module requires these other modules and libraries:
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2003-2008 Claus Färber
+Copyright (C) 2003-2010 Claus Faerber
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 

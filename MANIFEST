@@ -2,11 +2,12 @@ README
 Changes
 LICENSE
 MANIFEST
-META.yml
-Makefile.PL
-SIGNATURE
+Build.PL
 lib/DateTime/Format/DBI.pm
 t/00basic.t
 t/10pod.t
 t/11pod_cover.t
 t/withsqlite.t
+Makefile.PL
+META.yml
+SIGNATURE    Added here by Module::Build
