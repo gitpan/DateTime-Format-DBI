@@ -1,4 +1,4 @@
-# $Id: 00basic.t 4063 2008-09-13 16:49:41Z cfaerber $
+# $Id: 00basic.t 4449 2010-07-28 12:05:47Z cfaerber $
 use Test::More tests => 2;
 use Test::NoWarnings;
 

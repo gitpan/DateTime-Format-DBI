@@ -7,8 +7,6 @@ build_requires:
   Test::NoWarnings: 0
 configure_requires:
   Module::Build: 0.36
-conflicts:
-  DBI: '<1.21'
 generated_by: 'Module::Build version 0.3607'
 license: perl
 meta-spec:
@@ -20,9 +18,10 @@ no_index:
 provides:
   DateTime::Format::DBI:
     file: lib/DateTime/Format/DBI.pm
-    version: 0.034
+    version: 0.035
 requires:
+  DBI: 1.21
   DateTime: 0.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.034
+version: 0.035

@@ -10,7 +10,8 @@ WriteMakefile
           'PREREQ_PM' => {
                            'Test::More' => 0,
                            'DateTime' => '0.1',
-                           'Test::NoWarnings' => 0
+                           'Test::NoWarnings' => 0,
+                           'DBI' => '1.21'
                          }
         )
 ;

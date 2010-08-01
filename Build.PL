@@ -6,6 +6,9 @@ use utf8;
 
 use Module::Build;
 
+eval { require 'lib/DateTime/Format/DBI.pm' };
+my $db = \%DateTime::Format::DBI::_db_to_parser;
+
 my $b = Module::Build->new(
 	'module_name'	=> 'DateTime::Format::DBI',
 	'license'	=> 'perl',
@@ -17,9 +20,7 @@ my $b = Module::Build->new(
 
     	'requires'	=> {
 		'DateTime'	=> 0.10,
-	},
-	'conflicts'	=> {
-		'DBI'		=> '<1.21',
+		'DBI'		=> 1.21,
 	},
 	'recommends'	=> {
 	},
@@ -28,30 +29,24 @@ my $b = Module::Build->new(
 		'Test::NoWarnings' => 0,
 	},
 
-	auto_features => {
-		    map { make_feature($_) }
-			'MySQL',
-			'Pg',
-			'DB2',
-			'MSSQL',
-			'Oracle',
-			'SQLite',
-			'Sybase',
-		},
+	auto_features => { 
+		map { make_feature($_) } 
+			keys %{$db} 
+	},
 	'no_index' => {
 		'directory' => 'eg'
 	},
 	'resources' => {
-		'homepage' => 'http://search.cpan.org/dist/',
-		'repository' => 'https://perl-date-time.svn.sourceforge.net/svnroot/perl-date-time/modules/DateTime-Format-DBI/'
+		'homepage' 	=> 'http://search.cpan.org/dist/DateTime-Format-DBI/',
+		'repository'	=> 'https://perl-date-time.svn.sourceforge.net/svnroot/perl-date-time/modules/DateTime-Format-DBI/',
+		'bugtracker'	=> 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=DateTime-Format-DBI',
 	},
-
 );
 
 $b->create_build_script;
 
 sub make_feature {
-  my $dbname = shift;
+  my $dbname = $db->{shift};
   return ( (lc $dbname).'_support' => {
 	'description'	=> 'support for DateTime::Format::'.$dbname,
 	'requires'	=> { 'DateTime::Format::'.$dbname => shift || 0 }

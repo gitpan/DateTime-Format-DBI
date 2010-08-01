@@ -1,5 +1,5 @@
 package DateTime::Format::DBI;
-# $Id: DBI.pm 4365 2009-12-10 18:11:51Z cfaerber $
+# $Id: DBI.pm 4451 2010-08-01 14:49:22Z cfaerber $
 
 use strict;
 use vars qw ($VERSION);
@@ -8,7 +8,7 @@ use warnings;
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.034';
+$VERSION = '0.035';
 $VERSION = eval { $VERSION };
 
 our %db_to_parser = (
@@ -78,12 +78,14 @@ semantics of SQL datetime functions (and other SQL commands).
 
 =head1 CLASS METHODS
 
+This module provides a single factory method:
+
 =over 4
 
 =item * new( $dbh )
 
-Creates a new C<DateTime::Format::*> instance the exact class of which depends
-on the driver used for the database connection referenced by C<$dbh>. 
+Creates a new C<DateTime::Format::*> instance, the exact class of which depends
+on the database driver used for the database connection referenced by C<$dbh>. 
 
 =back
 
@@ -139,8 +141,8 @@ documentation of the individual format class for more information.
 
 =head1 SUPPORT
 
-Support for this module is provided via the datetime@perl.org email
-list.  See http://lists.perl.org/ for more details.
+Please report bugs and other requests to the rt tracker:
+L<https://rt.cpan.org/Public/Dist/Display.html?Name=DateTime-Format-DBI>.
 
 =head1 AUTHOR
 

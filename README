@@ -20,6 +20,9 @@ This module requires these other modules and libraries:
 		DateTime::Format::Oracle
   		DateTime::Format::Pg
 		DateTime::Format::SQLite
+		... 
+		(see man page for a full list of supported
+		formatter/parser modules)
 
 COPYRIGHT AND LICENCE
 
@@ -28,4 +31,4 @@ Copyright (C) 2003-2010 Claus Faerber
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
 
-$Id: README 4063 2008-09-13 16:49:41Z cfaerber $
+$Id: README 4451 2010-08-01 14:49:22Z cfaerber $
