@@ -1,5 +1,5 @@
 package DateTime::Format::DBI;
-# $Id: DBI.pm 4451 2010-08-01 14:49:22Z cfaerber $
+# $Id: DBI.pm 4454 2010-10-15 12:21:12Z cfaerber $
 
 use strict;
 use vars qw ($VERSION);
@@ -8,7 +8,7 @@ use warnings;
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.035';
+$VERSION = '0.036';
 $VERSION = eval { $VERSION };
 
 our %db_to_parser = (
@@ -27,7 +27,7 @@ sub new {
   UNIVERSAL::isa($dbh,'DBI::db') || croak('Not a DBI handle.');
 
 # my $dbtype = $dbh->{Driver}->{Name};
-  my @dbtypes = eval { DBI::_dbtype_names($dbh) };
+  my @dbtypes = eval { DBI::_dbtype_names($dbh,0) };
   my $dbtype = shift @dbtypes;
 
   my $pclass = $db_to_parser{lc $dbtype};
