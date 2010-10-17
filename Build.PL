@@ -29,11 +29,6 @@ my $b = Module::Build->new(
 		'Test::More' => 0, 
 		'Test::NoWarnings' => 0,
 	},
-
-	auto_features => { 
-		map { make_feature($_) } 
-			keys %{$db} 
-	},
 	'no_index' => {
 		'directory' => 'eg'
 	},
@@ -45,11 +40,3 @@ my $b = Module::Build->new(
 );
 
 $b->create_build_script;
-
-sub make_feature {
-  my $dbname = $db->{shift};
-  return ( (lc $dbname).'_support' => {
-	'description'	=> 'support for DateTime::Format::'.$dbname,
-	'requires'	=> { 'DateTime::Format::'.$dbname => shift || 0 }
-    })
-}

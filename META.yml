@@ -18,7 +18,7 @@ no_index:
 provides:
   DateTime::Format::DBI:
     file: lib/DateTime/Format/DBI.pm
-    version: 0.039_20101017
+    version: 0.039_20101018
 recommends:
   Test::Database: 0
 requires:
@@ -26,4 +26,4 @@ requires:
   DateTime: 0.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.039_20101017
+version: 0.039_20101018

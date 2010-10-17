@@ -1,13 +1,15 @@
-README
-Changes
-LICENSE
-MANIFEST
 Build.PL
+Changes
 lib/DateTime/Format/DBI.pm
+LICENSE
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+META.yml
+README
 t/00basic.t
 t/10pod.t
 t/11pod_cover.t
 t/withsqlite.t
-Makefile.PL
-META.yml
+t/withtestdb.t
 SIGNATURE    Added here by Module::Build
