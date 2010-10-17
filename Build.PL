@@ -23,6 +23,7 @@ my $b = Module::Build->new(
 		'DBI'		=> 1.21,
 	},
 	'recommends'	=> {
+		'Test::Database' => 0,
 	},
 	'build_requires' => {
 		'Test::More' => 0, 

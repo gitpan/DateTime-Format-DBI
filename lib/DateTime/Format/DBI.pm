@@ -8,7 +8,7 @@ use warnings;
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.036';
+$VERSION = '0.039_20101017';
 $VERSION = eval { $VERSION };
 
 our %db_to_parser = (
@@ -22,20 +22,44 @@ our %db_to_parser = (
   'sybase'	=> 'DateTime::Format::Sybase', # experimental
 );
 
+sub _get_parser {
+  while(@_) {
+    my $dbt = lc shift;
+    return $db_to_parser{$dbt}
+      if exists $db_to_parser{$dbt};
+  }
+  return undef;
+}
+
 sub new {
   my ($name,$dbh) = @_;
   UNIVERSAL::isa($dbh,'DBI::db') || croak('Not a DBI handle.');
 
 # my $dbtype = $dbh->{Driver}->{Name};
   my @dbtypes = eval { DBI::_dbtype_names($dbh,0) };
-  my $dbtype = shift @dbtypes;
+  my $pclass = _get_parser(@dbtypes);
 
-  my $pclass = $db_to_parser{lc $dbtype};
-  $pclass || croak("Unsupported database driver '".$dbtype."'");
+  croak("No supported database driver in '@dbtypes'")
+    unless defined $pclass;
 
-  my $parser = eval "use $pclass; $pclass->new();";
+  eval "use $pclass;";
+  croak("Cannot load $pclass: $@") if $@;
 
-  $parser || croak("Cannot load $pclass");
+  ## some db formatters are singletons and don't have 'new'
+  ##
+  my $new = UNIVERSAL::can($pclass, 'new');
+  
+  my $parser; if(ref $new) {
+    $parser = eval { $new->($pclass); };
+    croak "Cannot create object for $pclass: $@" if $@;
+  } else {
+    $parser = $pclass;
+  }
+
+  foreach(('format_datetime', 'parse_datetime')) {
+    croak "$pclass->$_ is missing" 
+      unless UNIVERSAL::can($parser, $_)
+  }
 
   return $parser;
 }
