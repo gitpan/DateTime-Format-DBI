@@ -1,4 +1,4 @@
-# $Id: withtestdb.t 4455 2010-10-17 14:23:09Z cfaerber $
+# $Id: withtestdb.t 4457 2010-10-19 13:35:13Z cfaerber $
 #
 use strict;
 use warnings;
@@ -42,4 +42,8 @@ foreach my $dbkey ( @dbkeys )
   }
 }
 
-diag "tested with: @done, skipped: @skip";
+my @mess;
+push @mess, "tested: @done" if @done;
+push @mess, "skipped: @skip" if @skip;
+
+diag join ", ", @mess;

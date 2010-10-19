@@ -1,9 +1,7 @@
 Revision history for Perl extension DateTime::Format::DBI.
 
-0.039_20101018
+0.040 Tue Oct 19 00:00:00 2010
 	- add tests with Test::Database
-
-0.039_20101017
 	- support DT::F:: modules that are singletons,
 	  fixes #61614: [patch] Oracle/Sybase support
 
@@ -49,4 +47,4 @@ Revision history for Perl extension DateTime::Format::DBI.
 	- supports DBD::mysql and DateTime::Format::MySQL
 	- supports DBD::Pg and DateTime::Format::Pg
 
-$Id: Changes 4456 2010-10-17 20:01:16Z cfaerber $
+$Id: Changes 4457 2010-10-19 13:35:13Z cfaerber $

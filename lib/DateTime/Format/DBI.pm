@@ -1,5 +1,5 @@
 package DateTime::Format::DBI;
-# $Id: DBI.pm 4456 2010-10-17 20:01:16Z cfaerber $
+# $Id: DBI.pm 4457 2010-10-19 13:35:13Z cfaerber $
 
 use strict;
 use vars qw ($VERSION);
@@ -8,7 +8,7 @@ use warnings;
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.039_20101018';
+$VERSION = '0.040';
 $VERSION = eval { $VERSION };
 
 our %db_to_parser = (
@@ -17,9 +17,9 @@ our %db_to_parser = (
   'pg'		=> 'DateTime::Format::Pg',
   'db2'		=> 'DateTime::Format::DB2',
   'mssql'	=> 'DateTime::Format::MSSQL',  # experimental
-  'oracle'	=> 'DateTime::Format::Oracle', # experimental
-  'sqlite'	=> 'DateTime::Format::SQLite', # experimental
-  'sybase'	=> 'DateTime::Format::Sybase', # experimental
+  'oracle'	=> 'DateTime::Format::Oracle',
+  'sqlite'	=> 'DateTime::Format::SQLite',
+  'sybase'	=> 'DateTime::Format::Sybase',
 );
 
 sub _get_parser {
@@ -35,7 +35,16 @@ sub new {
   my ($name,$dbh) = @_;
   UNIVERSAL::isa($dbh,'DBI::db') || croak('Not a DBI handle.');
 
+# NB: Using $dbh->{Driver}->{Name} this call does not work with drivers that
+# connect to multiple differnt types of databases, such as DBD::Proxy,
+# DBD::ODBC, DBD::JDBC,... 
+#
+# DBI already has code to determine the underlying database type, which is NOT
+# trivial. I don't want to duplicate that here (although it's only available
+# through a private API).
+
 # my $dbtype = $dbh->{Driver}->{Name};
+
   my @dbtypes = eval { DBI::_dbtype_names($dbh,0) };
   my $pclass = _get_parser(@dbtypes);
 
