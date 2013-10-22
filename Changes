@@ -1,5 +1,10 @@
 Revision history for Perl extension DateTime::Format::DBI.
 
+0.041 Wed Oct 23 00:00:00 2013
+	- recompile with updated Module::Build,
+	  FIXES: #89573: META.yml encoded in latin-1
+	  (reported by MIYAGAWA)
+
 0.040 Tue Oct 19 00:00:00 2010
 	- add tests with Test::Database
 	- support DT::F:: modules that are singletons,
@@ -46,5 +51,3 @@ Revision history for Perl extension DateTime::Format::DBI.
 	- original version
 	- supports DBD::mysql and DateTime::Format::MySQL
 	- supports DBD::Pg and DateTime::Format::Pg
-
-$Id: Changes 4457 2010-10-19 13:35:13Z cfaerber $

@@ -1,9 +1,0 @@
-^MYMETA.yml$
-\.svn
-^\.git
-^_build
-^blib
-^Build$
-.*\.tar\.gz$
-MANIFEST.bak
-^sql.*\.tmp$

@@ -1,4 +1,4 @@
-# $Id: withtestdb.t 4457 2010-10-19 13:35:13Z cfaerber $
+# $Id$
 #
 use strict;
 use warnings;

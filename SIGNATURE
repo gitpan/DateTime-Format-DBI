@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.64.
+signed via the Module::Signature module, version 0.66.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -12,26 +12,29 @@ the distribution may already have been compromised, and you should
 not run its Makefile.PL or Build.PL.
 
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
+Hash: SHA256
 
-SHA1 1a4f14c2819b5476b06df43656e47dc1319ebe5e Build.PL
-SHA1 68c45a25e1eb2dce7eed9c48d92f9b2570ebe549 Changes
-SHA1 9b37c74ac55bf4a1d347a873f9936ca24cab4f3b LICENSE
-SHA1 6eb53866ab9b1a8b60cc7ace6029754d38b755ec MANIFEST
-SHA1 6abdc1ab6f9e378b1a00862050bfedafa9abd139 MANIFEST.SKIP
-SHA1 ed2de489efc73cab1d17e17fc2a011f6f1d64baa META.yml
-SHA1 a7ec0a041d9c1ac4e0a83b18b4c851d5ff90bbf8 Makefile.PL
-SHA1 016c6cdea326d4252bf55ba96f50ee79fe9f9b62 README
-SHA1 34a66f01010ea63d94ae4cff678f82efc9251dff lib/DateTime/Format/DBI.pm
-SHA1 fba84bcb3b8f2c3743fbb79203d181488b293f50 t/00basic.t
-SHA1 331eb58bd820411c7685dfd7aff4d060fdafab5e t/10pod.t
-SHA1 94cbaa3da22888098b42d4affce837e3b45ccfef t/11pod_cover.t
-SHA1 16c19824b373d192db666cac33ecbcf1d5102bbf t/withsqlite.t
-SHA1 987f46bc44c8968f5cde9650fc3a5768da5f3a70 t/withtestdb.t
+SHA1 0ed34fcb7428141b468122524300138d5bbb3829 Build.PL
+SHA1 97a500e43b3f67298e194c92ce109ef25cf024eb Changes
+SHA1 296afab11451d2129927fd8ae8d387caa797ed2b LICENSE
+SHA1 397fbf54d41b2a3eaf0cebd18267bfe8a4669ca8 MANIFEST
+SHA1 5da1309e2285cd8a60dbd31a0b32f4a80080f15f META.json
+SHA1 2dc5981c15b53e0c299b263ff5f45ead21d6b08f META.yml
+SHA1 67bf778e25c1e2b35d9b09d32865e93b8d616f61 Makefile.PL
+SHA1 6549b01dc2a308e55c3dcd968b9b10f770f4963c README
+SHA1 64dd7a7fc190e631b5e364aac3607ec30f44cbf6 lib/DateTime/Format/DBI.pm
+SHA1 349e4053592a462bc3a19e647253201e7bb2dfd0 t/00basic.t
+SHA1 0ed7a7c687eafb552ddd99f2f99268fd613cda00 t/10pod.t
+SHA1 8f5a4f1ff1108a5169d651a71a52ea2543ec1419 t/11pod_cover.t
+SHA1 e67a2bdbabd19b3ad6a7b0a29b28e9f8ef0172ee t/withsqlite.t
+SHA1 5b481cdbfd03f5875304f8532f3ccbd9b09dda9d t/withtestdb.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.10 (Darwin)
 
-iEYEARECAAYFAky9nqUACgkQSKUOY2OWgPCQjwCfRR3ku4XdJEfNMDEf7ZTiRQTd
-VDYAoKWIaPcE4csA4FW3D4eghgE5KgSk
-=8xgF
+iQEcBAEBCAAGBQJSZwZGAAoJEIS+srvgrWBm4H0H/0VVrt1MluDmdcjcH4OGbi6R
+AJ3qMB7OR4yg+4neuldT9+wkveVuzSCHtkqijhAIOvYuXvKpaht+l77kdPzj642i
+rS58zTle+d6buFGZ5nRHwp9PvSWvkh9NGSXtZiQ+8VAovDUqiXN8unnXO/GWaxrK
++VGlZfx/SaGX0ETozM/k/3c7tQ0405ykVuvqj4VWng6ORKklmzXfKp0AedVCydyq
+zfYDBf3OjNQan7791DwTyKSLnlJPOLsQ4W6pMTrZx598M9LSPzFpR8H1MdNxZpB0
+y4blNH23EoHPXQC4UDb3uloKU4Cd7UsTYQFa/MC5wP7YLTd0v/rZyvqS7qBOe4o=
+=KDb7
 -----END PGP SIGNATURE-----

@@ -1,4 +1,4 @@
-# $Id: withsqlite.t 4063 2008-09-13 16:49:41Z cfaerber $
+# $Id$
 #
 use strict;
 use warnings;

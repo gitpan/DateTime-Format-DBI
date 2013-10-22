@@ -4,7 +4,6 @@ lib/DateTime/Format/DBI.pm
 LICENSE
 Makefile.PL
 MANIFEST
-MANIFEST.SKIP
 META.yml
 README
 t/00basic.t
@@ -12,4 +11,5 @@ t/10pod.t
 t/11pod_cover.t
 t/withsqlite.t
 t/withtestdb.t
+META.json
 SIGNATURE    Added here by Module::Build

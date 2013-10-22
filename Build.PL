@@ -30,11 +30,11 @@ my $b = Module::Build->new(
 		'Test::NoWarnings' => 0,
 	},
 	'no_index' => {
-		'directory' => 'eg'
+		'directory' => ['eg',],
 	},
 	'resources' => {
 		'homepage' 	=> 'http://search.cpan.org/dist/DateTime-Format-DBI/',
-		'repository'	=> 'https://perl-date-time.svn.sourceforge.net/svnroot/perl-date-time/modules/DateTime-Format-DBI/',
+		'repository'	=> 'https://guthub.com/cfaerber/DateTime-Format-DBI/',
 		'bugtracker'	=> 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=DateTime-Format-DBI',
 	},
 );

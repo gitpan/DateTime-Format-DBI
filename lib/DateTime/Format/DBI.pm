@@ -1,5 +1,4 @@
 package DateTime::Format::DBI;
-# $Id: DBI.pm 4457 2010-10-19 13:35:13Z cfaerber $
 
 use strict;
 use vars qw ($VERSION);
@@ -8,7 +7,7 @@ use warnings;
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.040';
+$VERSION = '0.041';
 $VERSION = eval { $VERSION };
 
 our %db_to_parser = (
@@ -183,7 +182,7 @@ Claus FE<auml>rber <CFAERBER@cpan.org>
 
 =head1 LICENSE
 
-Copyright 2003-2010 Claus FE<auml>rber.  All rights reserved.  
+Copyright 2003-2013 Claus FE<auml>rber.  All rights reserved.  
 
 This program is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
